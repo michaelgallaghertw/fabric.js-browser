@@ -1,0 +1,19 @@
+{
+  "name": "@teamwork/fabric.js-browser",
+  "version": "1.4.0",
+  "description": "Fabric.js reworked to support Webpack bundling",
+  "main": "dist/browser.min.js",
+  "scripts": {
+    "build": "node src/build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michaelgallaghertw/fabric.js-browser.git"
+  },
+  "author": "Michael Gallagher <michael.gallagher@teamwork.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/michaelgallaghertw/fabric.js-browser/issues"
+  },
+  "homepage": "https://github.com/michaelgallaghertw/fabric.js-browser#readme"
+}
