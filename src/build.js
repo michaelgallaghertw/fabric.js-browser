@@ -11,6 +11,6 @@ const contents = readFileSync(resolve(__dirname, '../lib/fabric.js/dist/all.min.
 const webpackSafe = contents.toString().replace(/require\('[a-z]+'\)/g, '{}').replace(/require\("[a-z]+"\)/g, '{}');
 
 const wrapped = 'var builder = function() {' + webpackSafe + 'delete this.fabric; return fabric; };' +
-  'var built = null; module.exports = () => built || (built = builder());'
+  'var built = null; module.exports = function() { return built || (built = builder()); };';
 
 writeFileSync(resolve(__dirname, '../dist/browser.min.js'), wrapped);
